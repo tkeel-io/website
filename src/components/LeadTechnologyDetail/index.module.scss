@@ -1,0 +1,76 @@
+.lead-technology-detail {
+  // margin-top: 720px;
+  position: relative;
+  z-index: 3;
+
+  .card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 100px 183px;
+    background: #09121a;
+
+    .min-width {
+      position: relative;
+      width: 1200px;
+      min-width: 1200px;
+      height: 787px;
+
+      .title {
+        margin-bottom: 34px;
+        margin-left: -14px;
+        padding-left: 20px;
+        color: #fff;
+        font-size: 40px;
+        line-height: 47px;
+
+        // width: 200px;
+
+        // background: linear-gradient(
+        //   90.91deg,
+        //   #0affff -9.4%,
+        //   rgba(36, 0, 255, 0) 99.64%
+        // );
+        background-image: url('/images/textBackground.png');
+        background-repeat: no-repeat;
+        background-position: 0 21px;
+        background-size: 195px 18px;
+      }
+
+      ul {
+        padding-left: 0;
+        list-style: square url('/images/dot.png');
+
+        li {
+          color: #fff;
+          font-weight: 600;
+          font-size: 21px;
+          line-height: 30px;
+        }
+      }
+
+      .video {
+        mix-blend-mode: lighten;
+      }
+
+      .img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        .number {
+          position: absolute;
+          top: 52%;
+          left: 52%;
+          color: #fff;
+          font-weight: 900;
+          font-size: 72px;
+          font-family: Roboto;
+          font-style: italic;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

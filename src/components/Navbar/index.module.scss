@@ -1,0 +1,40 @@
+.navbar {
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+  line-height: 60px;
+
+  // background-color: rgba(50, 69, 88, 0.3);
+  // backdrop-filter: blur(24px);
+
+  .left {
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .center {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+
+    & > div {
+      width: 100px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .right {
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

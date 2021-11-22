@@ -1,0 +1,6 @@
+.docusaurus
+.git
+.husky
+.idea
+.vscode
+node_modules
