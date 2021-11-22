@@ -21,7 +21,7 @@ npm run start
 
 ## Git Commit
 
-Follow [Conventional Commits](https://www.conventionalcommits.org/)
+Follow [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)
 
 ## Notes
 
