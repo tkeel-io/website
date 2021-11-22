@@ -23,6 +23,13 @@ npm run start
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/)
 
+## Notes
+
+Static resource of the markdown document please place in static
+`static/*/docs/` directory.
+
+For example, the image resource is placed in `static/images/docs/`
+
 ## License
 
 This project
