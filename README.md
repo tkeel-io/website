@@ -1,32 +1,30 @@
-# tkeel-website
+# tKeel Website
 
-## Table of Contents
+![Prerequisite](https://img.shields.io/badge/node-%3E%3D14.0.0-blue.svg)
+[![License: Apache--2.0](https://img.shields.io/github/license/tkeel-io/website)](https://github.com/tkeel-io/website/blob/master/LICENSE)
 
-- [Install](#install)
-- [Usage](#usage)
+## Prerequisites
+
+- node >=14.0.0
 
 ## Install
 
-```
+```sh
 npm install
 ```
 
 ## Usage
 
-Builds and serves a preview of site locally.
-
-```shell
+```sh
 npm run start
 ```
 
-Compiles site for production.
+## Git Commit
 
-```shell
-npm run build
-```
+Follow [Conventional Commits](https://www.conventionalcommits.org/)
 
-Serve built site locally.
+## License
 
-```shell
-npm run serve
-```
+This project
+is [Apache--2.0](https://github.com/tkeel-io/website/blob/master/LICENSE)
+licensed.
