@@ -15,7 +15,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'images/favicon.ico',
+  // favicon: 'images/favicon.ico',
   organizationName: 'QingCloud',
   projectName: 'tkeel-docs',
 
@@ -57,7 +57,7 @@ const config = {
             label: 'Documents',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/tkeel-io',
             label: 'GitHub',
             position: 'right',
           },
@@ -72,23 +72,6 @@ const config = {
               {
                 label: 'Documents',
                 to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
