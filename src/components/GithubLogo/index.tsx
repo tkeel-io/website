@@ -17,12 +17,12 @@ function GithubLogo(): JSX.Element {
       <div className={styles.githubImg}>
         <img
           className={styles.logo}
-          src={useBaseUrl('/images/gitHub.png')}
+          src={useBaseUrl('/images/gitbub.png')}
           alt=""
         />
         <img
           className={styles.githubBg}
-          src={useBaseUrl('/images/gitHubBg.png')}
+          src={useBaseUrl('/images/github-bg.png')}
           alt=""
         />
         <div className={styles.text}>GitHub</div>
@@ -34,7 +34,7 @@ function GithubLogo(): JSX.Element {
         tabIndex={0}
         onClick={onButtonClick}
       >
-        {/* <img src={useBaseUrl("/images/moveTop.png") }  alt="" /> */}
+        {/* <img src={useBaseUrl("/images/move-top.png") }  alt="" /> */}
       </div>
     </div>
   );

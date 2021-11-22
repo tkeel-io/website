@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import styles from './index.module.scss';
 
-import moveBottom from '@site/static/images/moveBottom.png';
+import moveBottom from '@site/static/images/move-bottom.png';
 
 type AppProps = {
   dom: {

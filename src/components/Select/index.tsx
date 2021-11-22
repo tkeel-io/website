@@ -31,7 +31,7 @@ function Select(): JSX.Element {
   return (
     <div className={styles.select}>
       <img
-        src={useBaseUrl('/images/selectBg.png')}
+        src={useBaseUrl('/images/select-bg.png')}
         alt=""
         className={styles.selectBg}
       />

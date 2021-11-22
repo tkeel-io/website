@@ -68,7 +68,7 @@ function DynamicImage(): JSX.Element {
     <div className={styles.dynamicImage}>
       {Container({
         order: 0,
-        img: '/images/digitalObject.png',
+        img: '/images/digital-object.png',
         gradient: 'linear-gradient(116.96deg, #5efbdf 13.81%, #3c6be3 94.18%)',
         text: {
           text1: '不仅关注设备',
@@ -77,14 +77,14 @@ function DynamicImage(): JSX.Element {
           text4: '将设备抽象作为物在数字平行世界的映射是不够的，空',
           text5: '间以及逻辑上的对象都应该可以找到对应的表现形式',
         },
-        bg: '/images/digitalObjectBg.png',
+        bg: '/images/digital-object-bg.png',
         bgStyle: { position: 'absolute', left: '-220px', top: '-200px' },
         bgColor: '#09121A',
       })}
 
       {Container({
         order: 1,
-        img: '/images/richData.png',
+        img: '/images/rich-data.png',
         gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
         text: {
           text1: '不单是消息通道',
@@ -93,14 +93,14 @@ function DynamicImage(): JSX.Element {
           text4: '消息承载的是某一时刻物的局部状态，我们需要汇聚消',
           text5: '息中的局部状态来构建物的数字平行世界',
         },
-        bg: '/images/richDataBg.png',
+        bg: '/images/rich-data-bg.png',
         bgStyle: { position: 'absolute', left: '-120px', top: '-10px' },
         bgColor: '#09121A',
       })}
 
       {Container({
         order: 0,
-        img: '/images/digitalInteraction.png',
+        img: '/images/digital-interaction.png',
         gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
         text: {
           text1: '不只是数采',
@@ -109,14 +109,14 @@ function DynamicImage(): JSX.Element {
           text4: '物联网不仅需要关注设备的采集，我们更关注采集的数',
           text5: '据如何更好的被利用',
         },
-        bg: '/images/digitalInteractionBg.png',
+        bg: '/images/digital-interaction-bg.png',
         bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
         bgColor: '#09121A',
       })}
 
       {Container({
         order: 1,
-        img: '/images/digitalTwin.png',
+        img: '/images/digital-twin.png',
         gradient: 'linear-gradient(116.96deg, #5EFBDF 13.81%, #3C6BE3 94.18%)',
         text: {
           text1: '从时序到复杂',

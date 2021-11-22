@@ -187,19 +187,19 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
       <Particles params={params} className={styles.particles} />
 
       <img
-        src={useBaseUrl('/images/leadTechnologyBg.png')}
+        src={useBaseUrl('/images/lead-technology-bg.png')}
         className={styles.bg}
         alt=""
       />
       <div className={styles.title}>技术领先性</div>
       <div className={styles.container}>
-        {Card({ img: '/images/cloudNative.png', text: '100% Cloud Native' })}
-        {Card({ img: '/images/anyLanguage.png', text: 'Any language' })}
+        {Card({ img: '/images/cloud-native.png', text: '100% Cloud Native' })}
+        {Card({ img: '/images/any-language.png', text: 'Any language' })}
         {Card({
-          img: '/images/everythingPlugin.png',
+          img: '/images/everything-plugin.png',
           text: 'Everything is plugin',
         })}
-        {Card({ img: '/images/soEasy.png', text: 'Never so easy' })}
+        {Card({ img: '/images/so-easy.png', text: 'Never so easy' })}
       </div>
     </div>
   );

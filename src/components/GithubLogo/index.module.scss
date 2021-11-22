@@ -54,7 +54,7 @@
     right: 140px;
     width: 65px;
     height: 65px;
-    background-image: url('/images/moveTop.png');
+    background-image: url('/images/move-top.png');
     background-repeat: no-repeat;
     background-size: cover;
     transform: scale(1);
@@ -63,6 +63,6 @@
   }
 
   .move-top:hover {
-    background-image: url('/images/moveTopHover.png');
+    background-image: url('/images/move-top-hover.png');
   }
 }
