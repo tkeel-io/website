@@ -6,10 +6,10 @@ import styles from './index.module.scss';
 function Footer(): JSX.Element {
   return (
     <div className={styles.footer}>
-      <div className={styles.minWidth}>
+      <div className={styles['min-width']}>
         <div className={styles.left}>
           <div className={styles.logo}>LOGO</div>
-          <div className={styles.copyRight}>
+          <div className={styles['copy-right']}>
             © 2021 tKeel 版权所有 备案信息备案信息备案信息{' '}
           </div>
         </div>

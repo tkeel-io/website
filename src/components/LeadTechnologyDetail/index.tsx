@@ -25,7 +25,7 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
   const Card = ({ title, img, arr, bg, bgStyle }: CardProps) => {
     return (
       <div className={styles.card}>
-        <div className={styles.minWidth}>
+        <div className={styles['min-width']}>
           <img src={useBaseUrl(bg)} alt="" style={bgStyle} />
           <div className={styles.title}>{title} </div>
           <ul>
@@ -88,7 +88,7 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
 
     return (
       <div className={styles.card} ref={cloudNativeDetailCard}>
-        <div className={styles.minWidth}>
+        <div className={styles['min-width']}>
           <div className={styles.title}>{title} </div>
           <ul>
             {arr.map((item) => {
@@ -109,7 +109,10 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
   const leadTechnologyDetail = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => leadTechnologyDetail.current);
   return (
-    <div className={styles.leadTechnologyDetail} ref={leadTechnologyDetail}>
+    <div
+      className={styles['lead-technology-detail']}
+      ref={leadTechnologyDetail}
+    >
       {CloudNativeDetailCard({
         title: '100% Cloud Native',
         img: '/images/cloud-native-detail.png',

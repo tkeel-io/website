@@ -52,7 +52,7 @@ function Hero({ dom }: AppProps): JSX.Element {
         </div>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
         <div
-          className={styles.moveBottom}
+          className={styles['move-bottom']}
           role="button"
           tabIndex={0}
           onClick={onButtonClick}

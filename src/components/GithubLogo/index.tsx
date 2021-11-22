@@ -13,15 +13,15 @@ const onButtonClick = () => {
 
 function GithubLogo(): JSX.Element {
   return (
-    <div className={styles.githubLogo}>
-      <div className={styles.githubImg}>
+    <div className={styles['github-logo']}>
+      <div className={styles['github-img']}>
         <img
           className={styles.logo}
           src={useBaseUrl('/images/gitbub.png')}
           alt=""
         />
         <img
-          className={styles.githubBg}
+          className={styles['github-bg']}
           src={useBaseUrl('/images/github-bg.png')}
           alt=""
         />
@@ -29,7 +29,7 @@ function GithubLogo(): JSX.Element {
       </div>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
       <div
-        className={styles.moveTop}
+        className={styles['move-top']}
         role="button"
         tabIndex={0}
         onClick={onButtonClick}

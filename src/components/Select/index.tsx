@@ -33,7 +33,7 @@ function Select(): JSX.Element {
       <img
         src={useBaseUrl('/images/select-bg.png')}
         alt=""
-        className={styles.selectBg}
+        className={styles['select-bg']}
       />
 
       <div className={styles.title}>为什么要选择tKeel？</div>

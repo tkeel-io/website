@@ -183,7 +183,7 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
   });
 
   return (
-    <div className={styles.leadTechnology} ref={leadTechnology}>
+    <div className={styles['lead-technology']} ref={leadTechnology}>
       <Particles params={params} className={styles.particles} />
 
       <img
