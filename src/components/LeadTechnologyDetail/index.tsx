@@ -8,111 +8,112 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './index.module.scss';
 
-function LeadTechnologyDetail({}, ref): JSX.Element {
-  type CardProps = {
-    title: string;
-    img: string;
-    arr: string[];
-    bg?: string;
-    bgStyle?: object;
-  };
-  type CloudNativeDetailCardProps = {
-    title: string;
-    img: string;
-    arr: string[];
-  };
+type CardProps = {
+  title: string;
+  img: string;
+  arr: string[];
+  bg: string;
+  bgStyle: object;
+};
+type CloudNativeDetailCardProps = {
+  title: string;
+  img: string;
+  arr: string[];
+};
 
-  const Card = ({ title, img, arr, bg, bgStyle }: CardProps) => {
-    return (
-      <div className={styles.card}>
-        <div className={styles['min-width']}>
-          <img src={useBaseUrl(bg)} alt="" style={bgStyle} />
+function Card({ title, img, arr, bg, bgStyle }: CardProps) {
+  return (
+    <div className={styles.card}>
+      <div className={styles.minWidth}>
+        <img src={useBaseUrl(bg)} alt="" style={bgStyle} />
+        <div className={styles.text}>
           <div className={styles.title}>{title} </div>
           <ul>
             {arr.map((item) => {
               return <li key={item}>{item}</li>;
             })}
           </ul>
-          <div className={styles.img}>
-            <video
-              src={img}
-              width="1009"
-              height="606"
-              autoPlay
-              loop
-              muted
-              className={styles.video}
-            />
-          </div>
+        </div>
+        <div className={styles.img}>
+          <video
+            src={img}
+            width="1009"
+            height="606"
+            autoPlay
+            loop
+            muted
+            className={styles.video}
+          />
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+}
 
-  const CloudNativeDetailCard = ({
-    title,
-    img,
-    arr,
-  }: CloudNativeDetailCardProps) => {
-    const numEl = useRef<HTMLDivElement>(null);
-    const cloudNativeDetailCard = useRef<HTMLDivElement>(null);
+function CloudNativeDetailCard({
+  title,
+  img,
+  arr,
+}: CloudNativeDetailCardProps) {
+  const numEl = useRef<HTMLDivElement>(null);
+  const cloudNativeDetailCard = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-      const checkInPage = (el) => {
-        const pageHeight: number = document.documentElement.clientHeight;
-        const contentTop: number = el.getBoundingClientRect()?.top;
-        const contentHeight: number = el.offsetHeight;
-        return (
-          (contentTop < pageHeight && contentTop >= 0) ||
-          (contentTop < 0 && contentTop + contentHeight > 0)
-        );
-      };
+  useEffect(() => {
+    const checkInPage = (el) => {
+      const pageHeight: number = document.documentElement.clientHeight;
+      const contentTop: number = el.getBoundingClientRect().top;
+      const contentHeight: number = el.offsetHeight;
+      return (
+        (contentTop < pageHeight && contentTop >= 0) ||
+        (contentTop < 0 && contentTop + contentHeight > 0)
+      );
+    };
 
-      function btnClick() {
-        if (checkInPage(numEl.current)) {
-          let num = 0;
-          const t = setInterval(function fn() {
-            num += 1;
-            numEl.current.innerHTML = `${num}%`;
-            if (num === 100) {
-              clearInterval(t);
-            }
-          }, 10);
-          // 删除事件绑定
-          window.removeEventListener('scroll', btnClick, false);
-        }
+    function btnClick() {
+      if (checkInPage(numEl.current)) {
+        let num = 0;
+        const t = setInterval(function fn() {
+          num += 1;
+          numEl.current.innerHTML = `${num}%`;
+          if (num === 100) {
+            clearInterval(t);
+          }
+        }, 10);
+        // 删除事件绑定
+        window.removeEventListener('scroll', btnClick, false);
       }
+    }
+    window.addEventListener('scroll', btnClick, false);
+  });
 
-      window.addEventListener('scroll', btnClick, false);
-    });
-
-    return (
-      <div className={styles.card} ref={cloudNativeDetailCard}>
-        <div className={styles['min-width']}>
+  return (
+    <div className={styles.card} ref={cloudNativeDetailCard}>
+      <div className={styles.minWidth}>
+        <div className={styles.text}>
           <div className={styles.title}>{title} </div>
           <ul>
             {arr.map((item) => {
               return <li key={item}>{item}</li>;
             })}
           </ul>
-          <div className={styles.img}>
-            <img src={useBaseUrl(img)} alt="" />
-            <div ref={numEl} className={styles.number}>
-              0
-            </div>
+        </div>
+
+        <div className={styles.img}>
+          <img src={useBaseUrl(img)} alt="" />
+          <div ref={numEl} className={styles.number}>
+            0
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+}
 
+function LeadTechnologyDetail({}, ref): JSX.Element {
   const leadTechnologyDetail = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => leadTechnologyDetail.current);
   return (
-    <div
-      className={styles['lead-technology-detail']}
-      ref={leadTechnologyDetail}
-    >
+    <div className={styles.leadTechnologyDetail} ref={leadTechnologyDetail}>
       {CloudNativeDetailCard({
         title: '100% Cloud Native',
         img: '/images/cloud-native-detail.png',

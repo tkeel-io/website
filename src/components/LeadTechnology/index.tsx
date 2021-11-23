@@ -29,6 +29,28 @@ type CardProps = {
   text: string;
 };
 
+function Card({ img, text }: CardProps) {
+  return (
+    <CardBg
+      style={{
+        width: '400px',
+        height: '200px',
+        borderRadius: 0,
+        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+        marginBottom: '44px',
+      }}
+      borderRadius="0"
+    >
+      <div className={styles.card}>
+        <div>
+          <img src={useBaseUrl(img)} alt="" />
+        </div>
+        <div className={styles.text}>{text}</div>
+      </div>
+    </CardBg>
+  );
+}
+
 function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
   const params = {
     particles: {
@@ -133,28 +155,6 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
       },
     },
     retina_detect: true,
-  };
-
-  const Card = ({ img, text }: CardProps) => {
-    return (
-      <CardBg
-        style={{
-          width: '400px',
-          height: '200px',
-          borderRadius: 0,
-          backgroundColor: 'rgba(255, 255, 255, 0.05)',
-          marginBottom: '44px',
-        }}
-        borderRadius="0"
-      >
-        <div className={styles.card}>
-          <div>
-            <img src={useBaseUrl(img)} alt="" />
-          </div>
-          <div className={styles.text}>{text}</div>
-        </div>
-      </CardBg>
-    );
   };
 
   const leadTechnology = useRef<HTMLDivElement>(null);

@@ -4,7 +4,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './index.module.scss';
 
-const Card = (img: string, theme: string, desc: string) => {
+type CardProps = {
+  img: string;
+  theme: string;
+  desc: string;
+};
+
+function Card({ img, theme, desc }: CardProps) {
   return (
     <CardBg
       style={{
@@ -25,54 +31,53 @@ const Card = (img: string, theme: string, desc: string) => {
       </div>
     </CardBg>
   );
-};
-
+}
 function Select(): JSX.Element {
   return (
     <div className={styles.select}>
       <img
-        src={useBaseUrl('/images/select-bg.png')}
+        src={useBaseUrl('/images/selectBg.png')}
         alt=""
-        className={styles['select-bg']}
+        className={styles.selectBg}
       />
 
       <div className={styles.title}>为什么要选择tKeel？</div>
       <div className={styles.subtitle}>功能特性</div>
 
       <div className={styles.container}>
-        {Card(
-          '/images/multiplexing.png',
-          '功能特性',
-          '一句话解释一段话解释一段话解释一段话解释一句话解释'
-        )}
-        {Card(
-          '/images/any.png',
-          '功能特性',
-          '一句话解释一段话解释一段话解释一段话解释一句话解释'
-        )}
-        {Card(
-          '/images/mix.png',
-          '功能特性',
-          '一句话解释一段话解释一段话解释一段话解释一句话解释'
-        )}
-        {Card(
-          '/images/fast.png',
-          '功能特性',
-          '一句话解释一段话解释一段话解释一段话解释一句话解释'
-        )}
-        {Card(
-          '/images/dimension.png',
-          '功能特性',
-          '一句话解释一段话解释一段话解释一段话解释一句话解释'
-        )}
-        {Card(
-          '/images/performance.png',
-          '功能特性',
-          '一句话解释一段话解释一段话解释一段话解释一句话解释'
-        )}
+        {Card({
+          img: '/images/multiplexing.png',
+          theme: '功能特性',
+          desc: '一句话解释一段话解释一段话解释一段话解释一句话解释',
+        })}
+        {Card({
+          img: '/images/any.png',
+          theme: '功能特性',
+          desc: '一句话解释一段话解释一段话解释一段话解释一句话解释',
+        })}
+        {Card({
+          img: '/images/mix.png',
+          theme: '功能特性',
+          desc: '一句话解释一段话解释一段话解释一段话解释一句话解释',
+        })}
+        {Card({
+          img: '/images/fast.png',
+          theme: '功能特性',
+          desc: '一句话解释一段话解释一段话解释一段话解释一句话解释',
+        })}
+        {Card({
+          img: '/images/dimension.png',
+          theme: '功能特性',
+          desc: '一句话解释一段话解释一段话解释一段话解释一句话解释',
+        })}
+        {Card({
+          img: '/images/performance.png',
+          theme: '功能特性',
+          desc: '一句话解释一段话解释一段话解释一段话解释一句话解释',
+        })}
       </div>
     </div>
   );
 }
 
-export default Select;
+export default React.memo(Select);
