@@ -88,6 +88,38 @@ function DynamicImage(): JSX.Element {
         bgColor: '#09121A',
       })}
 
+    {Container({
+        order: 1,
+        img: '/videos/rich-data.mp4',
+        gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
+        text: {
+          text1: '不单是消息通道',
+          text2: '数据',
+          text3: '层次更加丰富',
+          text4: '消息承载的是某一时刻物的局部状态，我们需要汇聚消',
+          text5: '息中的局部状态来构建物的数字平行世界',
+        },
+        bg: '/images/rich-data-bg.png',
+        bgStyle: { position: 'absolute', left: '-120px', top: '-10px' },
+        bgColor: '#09121A',
+      })}
+
+      {Container({
+        order: 0,
+        img: '/videos/digital-interaction.mp4',
+        gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
+        text: {
+          text1: '不只是数采',
+          text2: '关注',
+          text3: '数字世界的互动',
+          text4: '物联网不仅需要关注设备的采集，我们更关注采集的数',
+          text5: '据如何更好的被利用',
+        },
+        bg: '/images/digital-interaction-bg.png',
+        bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
+        bgColor: '#09121A',
+      })} 
+
       {/* {Container({
         order: 0,
         img: '/images/digitalObject.png',
