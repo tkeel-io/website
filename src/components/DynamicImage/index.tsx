@@ -31,11 +31,11 @@ function DynamicImage(): JSX.Element {
   }: ContainerProps) {
     return (
       <div className={styles.container} style={{ backgroundColor: bgColor }}>
-        <div className={styles.minWidth}>
+        <div className={styles['min-width']}>
           <img src={useBaseUrl(bg)} alt="" style={bgStyle} />
 
           <div className={styles.text} style={{ order }}>
-            <div className={styles.textInner}>
+            <div className={styles['text-inner']}>
               {text?.text1}
               <br />
               {text?.text2}
@@ -71,7 +71,7 @@ function DynamicImage(): JSX.Element {
   }
 
   return (
-    <div className={styles.dynamicImage}>
+    <div className={styles['dynamic-image']}>
       {Container({
         order: 0,
         img: '/videos/digital-object.mp4',
@@ -88,7 +88,7 @@ function DynamicImage(): JSX.Element {
         bgColor: '#09121A',
       })}
 
-    {Container({
+      {Container({
         order: 1,
         img: '/videos/rich-data.mp4',
         gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
@@ -118,7 +118,7 @@ function DynamicImage(): JSX.Element {
         bg: '/images/digital-interaction-bg.png',
         bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
         bgColor: '#09121A',
-      })} 
+      })}
 
       {/* {Container({
         order: 0,

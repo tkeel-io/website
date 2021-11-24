@@ -113,7 +113,10 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
   const leadTechnologyDetail = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => leadTechnologyDetail.current);
   return (
-    <div className={styles.leadTechnologyDetail} ref={leadTechnologyDetail}>
+    <div
+      className={styles['lead-technology-detail']}
+      ref={leadTechnologyDetail}
+    >
       {CloudNativeDetailCard({
         title: '100% Cloud Native',
         img: '/images/cloud-native-detail.png',

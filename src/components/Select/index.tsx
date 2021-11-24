@@ -80,4 +80,4 @@ function Select(): JSX.Element {
   );
 }
 
-export default React.memo(Select);
+export default Select;
