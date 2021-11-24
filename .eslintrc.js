@@ -121,11 +121,10 @@ module.exports = {
             groups: [
               ['^react', '^prop-types', '^@?\\w'],
               [
-                '^(@src/(constants|containers|components|routes|pages|hooks|contexts|api|services|utils))(/.*|$)',
+                '^(@/(constants|containers|components|routes|pages|hooks|contexts|api|services|utils))(/.*|$)',
               ],
               ['^\\.', '^\\u0000'],
-              ['^(@src/styles)(/.*|$)', '^.+\\.module.s?css$', '^.+\\.s?css$'],
-              ['^(@site)(/.*|$)'],
+              ['^(@/styles)(/.*|$)', '^.+\\.module.s?css$', '^.+\\.s?css$'],
             ],
           },
         ],

@@ -1,0 +1,51 @@
+.dynamic-image {
+  position: relative;
+  z-index: 1;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 660px;
+    justify-content: center;
+    .min-width {
+      position: relative;
+      // width: 1200px;
+      min-width: 1200px;
+      display: flex;
+      justify-content: center;
+      .video {
+        mix-blend-mode: lighten;
+      }
+      .text {
+        // height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text-inner {
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 58px;
+          line-height: 80px;
+          color: #ffffff;
+          text-align: center;
+          .describe {
+            font-size: 20px;
+            line-height: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+          }
+        }
+        .gradualText {
+          background: linear-gradient(
+            116.96deg,
+            #5efbdf 13.81%,
+            #3c6be3 94.18%
+          );
+        }
+      }
+    }
+  }
+}
