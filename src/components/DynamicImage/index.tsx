@@ -20,7 +20,7 @@ type ContainerProps = {
 };
 
 function DynamicImage(): JSX.Element {
-  const Container = ({
+  function Container({
     order,
     img,
     gradient,
@@ -28,7 +28,7 @@ function DynamicImage(): JSX.Element {
     bg = '',
     bgStyle = {},
     bgColor = '',
-  }: ContainerProps) => {
+  }: ContainerProps) {
     return (
       <div className={styles.container} style={{ backgroundColor: bgColor }}>
         <div className={styles['min-width']}>
@@ -56,19 +56,25 @@ function DynamicImage(): JSX.Element {
               </div>
             </div>
           </div>
-          <div className={styles.img}>
-            <img src={useBaseUrl(img)} alt="" />
-          </div>
+          <video
+            src={img}
+            width="520"
+            height="460"
+            autoPlay
+            loop
+            muted
+            className={styles.video}
+          />
         </div>
       </div>
     );
-  };
+  }
 
   return (
     <div className={styles['dynamic-image']}>
       {Container({
         order: 0,
-        img: '/images/digital-object.png',
+        img: '/videos/digital-object.mp4',
         gradient: 'linear-gradient(116.96deg, #5efbdf 13.81%, #3c6be3 94.18%)',
         text: {
           text1: '不仅关注设备',
@@ -84,7 +90,7 @@ function DynamicImage(): JSX.Element {
 
       {Container({
         order: 1,
-        img: '/images/rich-data.png',
+        img: '/videos/rich-data.mp4',
         gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
         text: {
           text1: '不单是消息通道',
@@ -100,7 +106,7 @@ function DynamicImage(): JSX.Element {
 
       {Container({
         order: 0,
-        img: '/images/digital-interaction.png',
+        img: '/videos/digital-interaction.mp4',
         gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
         text: {
           text1: '不只是数采',
@@ -114,9 +120,57 @@ function DynamicImage(): JSX.Element {
         bgColor: '#09121A',
       })}
 
+      {/* {Container({
+        order: 0,
+        img: '/images/digitalObject.png',
+        gradient: 'linear-gradient(116.96deg, #5efbdf 13.81%, #3c6be3 94.18%)',
+        text: {
+          text1: '不仅关注设备',
+          text2: '聚焦',
+          text3: '多维数字对象',
+          text4: '将设备抽象作为物在数字平行世界的映射是不够的，空',
+          text5: '间以及逻辑上的对象都应该可以找到对应的表现形式',
+        },
+        bg: '/images/digitalObjectBg.png',
+        bgStyle: { position: 'absolute', left: '-220px', top: '-200px' },
+        bgColor: '#09121A',
+      })}
+
       {Container({
         order: 1,
-        img: '/images/digital-twin.png',
+        img: '/images/richData.png',
+        gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
+        text: {
+          text1: '不单是消息通道',
+          text2: '数据',
+          text3: '层次更加丰富',
+          text4: '消息承载的是某一时刻物的局部状态，我们需要汇聚消',
+          text5: '息中的局部状态来构建物的数字平行世界',
+        },
+        bg: '/images/richDataBg.png',
+        bgStyle: { position: 'absolute', left: '-120px', top: '-10px' },
+        bgColor: '#09121A',
+      })}
+
+      {Container({
+        order: 0,
+        img: '/images/digitalInteraction.png',
+        gradient: 'linear-gradient(97.67deg, #81A6FF 13.63%, #8E55E9 99.09%)',
+        text: {
+          text1: '不只是数采',
+          text2: '关注',
+          text3: '数字世界的互动',
+          text4: '物联网不仅需要关注设备的采集，我们更关注采集的数',
+          text5: '据如何更好的被利用',
+        },
+        bg: '/images/digitalInteractionBg.png',
+        bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
+        bgColor: '#09121A',
+      })} */}
+
+      {Container({
+        order: 1,
+        img: '/videos/digital-twin.mp4',
         gradient: 'linear-gradient(116.96deg, #5EFBDF 13.81%, #3C6BE3 94.18%)',
         text: {
           text1: '从时序到复杂',

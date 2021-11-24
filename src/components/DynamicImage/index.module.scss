@@ -5,54 +5,40 @@
   .container {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 660px;
-
+    justify-content: center;
     .min-width {
       position: relative;
-      display: flex;
-      justify-content: center;
-
       // width: 1200px;
       min-width: 1200px;
-
-      .img {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+      display: flex;
+      justify-content: center;
+      .video {
+        mix-blend-mode: lighten;
       }
-
       .text {
-        display: flex;
-
         // height: 100%;
         flex: 1;
-        align-items: center;
+        display: flex;
         justify-content: center;
-
+        align-items: center;
         .text-inner {
-          color: #fff;
+          font-family: PingFang SC;
+          font-style: normal;
           font-weight: 600;
           font-size: 58px;
-          font-family: 'PingFang SC';
-          font-style: normal;
           line-height: 80px;
+          color: #ffffff;
           text-align: center;
-
           .describe {
-            margin-top: 40px;
-            color: rgb(255 255 255 / 80%);
             font-size: 20px;
             line-height: 40px;
             text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
           }
         }
-
-        .gradual-text {
+        .gradualText {
           background: linear-gradient(
             116.96deg,
             #5efbdf 13.81%,

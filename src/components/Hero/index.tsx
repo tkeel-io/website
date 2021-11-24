@@ -41,9 +41,9 @@ function Hero({ dom }: AppProps): JSX.Element {
     <div className={styles.hero} ref={hero}>
       <div className={styles['min-width']}>
         <div className={styles.row}>
-          tKeel，颠覆传统物联网应用
+          tKeel，颠覆传统物联网应用开发的
           <br />
-          开发的新一代核心架构
+          新一代核心架构
         </div>
         <div className={styles.row}>
           帮助物联网服务商关注于数据层，在可插拔架构基础上
