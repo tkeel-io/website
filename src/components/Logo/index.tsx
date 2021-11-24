@@ -1,7 +1,7 @@
 import React from 'react';
-import LogoImage from '@site/static/images/logo.svg';
 
 import styles from './index.module.scss';
+import LogoImage from '@/assets/images/logo.svg';
 
 function Logo(): JSX.Element {
   return (

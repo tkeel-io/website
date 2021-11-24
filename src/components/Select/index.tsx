@@ -1,5 +1,6 @@
 import React from 'react';
 import CardBg from 'react-animated-3d-card';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -9,7 +10,7 @@ type CardProps = {
   desc: string;
 };
 
-function Card({ img, theme, desc }: CardProps) {
+function Card({ img = '', theme, desc }: CardProps) {
   return (
     <CardBg
       style={{
@@ -23,7 +24,7 @@ function Card({ img, theme, desc }: CardProps) {
     >
       <div className={styles.card}>
         <div className={styles.img}>
-          <img src={img} alt="" />
+          <Image src={img} alt="" layout="fill" />
         </div>
         <div className={styles.theme}>{theme}</div>
         <div className={styles.desc}>{desc}</div>
@@ -31,10 +32,16 @@ function Card({ img, theme, desc }: CardProps) {
     </CardBg>
   );
 }
+
 function Select(): JSX.Element {
   return (
     <div className={styles.select}>
-      <img src="/images/selectBg.png" alt="" className={styles.selectBg} />
+      <Image
+        src="/images/select-bg.png"
+        alt=""
+        className={styles['select-bg']}
+        layout="fill"
+      />
       <div className={styles.title}>为什么要选择tKeel？</div>
       <div className={styles.subtitle}>功能特性</div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -15,12 +16,10 @@ function Footer(): JSX.Element {
         <div className={styles.center}>
           <span>tKeel</span>
           <span>文档</span>
-          <span>
-            <img src="" alt="" /> GitHub
-          </span>
+          <span>GitHub</span>
         </div>
         <div className={styles.right}>
-          <img src="/images/wechat.png" alt="wechat" />
+          <Image src="/images/wechat.png" alt="wechat" layout="fill" />
           <div>关注tKeel企业微信</div>
           <div>随时了解最新活动与资讯</div>
         </div>

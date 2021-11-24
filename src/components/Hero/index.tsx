@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
-
 import moveBottom from '@/assets/images/to-bottom.svg';
 
 type AppProps = {
@@ -57,7 +57,7 @@ function Hero({ dom }: AppProps): JSX.Element {
           tabIndex={0}
           onClick={onButtonClick}
         >
-          <img src={moveBottom} alt="" />
+          <Image src={moveBottom} alt="" layout="fill" />
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -14,11 +15,17 @@ function GithubLogo(): JSX.Element {
   return (
     <div className={styles['github-logo']}>
       <div className={styles['github-img']}>
-        <img className={styles.logo} src="/images/github.png'" alt="" />
-        <img
-          className={styles['github-bg']}
-          src="/images/github-bg.png'"
+        <Image
+          className={styles.logo}
+          src="/images/github.png"
           alt=""
+          layout="fill"
+        />
+        <Image
+          className={styles['github-bg']}
+          src="/images/github-bg.png"
+          alt=""
+          layout="fill"
         />
         <div className={styles.text}>GitHub</div>
       </div>
