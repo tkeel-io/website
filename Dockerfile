@@ -1,6 +1,6 @@
 FROM node:lts
 
-WORKDIR /tkeel-docs
+WORKDIR /tkeel-website
 
 COPY ./ ./
 
