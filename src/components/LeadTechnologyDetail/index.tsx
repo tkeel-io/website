@@ -4,7 +4,7 @@ import React, {
   useImperativeHandle,
   useRef,
 } from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -21,11 +21,11 @@ type CloudNativeDetailCardProps = {
   arr: string[];
 };
 
-function Card({ title, img, arr, bg, bgStyle }: CardProps) {
+function Card({ title, img = '', arr, bg = '', bgStyle }: CardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.minWidth}>
-        <img src={useBaseUrl(bg)} alt="" style={bgStyle} />
+        <Image src={bg} alt="" style={bgStyle} layout="fill" />
         <div className={styles.text}>
           <div className={styles.title}>{title} </div>
           <ul>
@@ -52,7 +52,7 @@ function Card({ title, img, arr, bg, bgStyle }: CardProps) {
 
 function CloudNativeDetailCard({
   title,
-  img,
+  img = '',
   arr,
 }: CloudNativeDetailCardProps) {
   const numEl = useRef<HTMLDivElement>(null);
@@ -99,7 +99,7 @@ function CloudNativeDetailCard({
         </div>
 
         <div className={styles.img}>
-          <img src={useBaseUrl(img)} alt="" />
+          <Image src={img} alt="" layout="fill" />
           <div ref={numEl} className={styles.number}>
             0
           </div>

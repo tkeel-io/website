@@ -6,7 +6,7 @@ import React, {
 } from 'react';
 import CardBg from 'react-animated-3d-card';
 import Particles from 'react-tsparticles';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -29,7 +29,7 @@ type CardProps = {
   text: string;
 };
 
-function Card({ img, text }: CardProps) {
+function Card({ img = '', text }: CardProps) {
   return (
     <CardBg
       style={{
@@ -43,7 +43,7 @@ function Card({ img, text }: CardProps) {
     >
       <div className={styles.card}>
         <div>
-          <img src={useBaseUrl(img)} alt="" />
+          <Image src={img} alt="" layout="fill" />
         </div>
         <div className={styles.text}>{text}</div>
       </div>
@@ -185,11 +185,11 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
   return (
     <div className={styles['lead-technology']} ref={leadTechnology}>
       <Particles params={params} className={styles.particles} />
-
-      <img
-        src={useBaseUrl('/images/lead-technology-bg.png')}
+      <Image
+        src="/images/lead-technology-bg.png"
         className={styles.bg}
         alt=""
+        layout="fill"
       />
       <div className={styles.title}>技术领先性</div>
       <div className={styles.container}>

@@ -64,7 +64,3 @@ config/local-*.*
 # Production
 build/
 dist/
-
-# Docusaurus
-.docusaurus
-.cache-loader

@@ -24,11 +24,6 @@ module.exports = {
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
   ],
-  settings: {
-    'import/resolver': {
-      webpack: { config: './webpack.config.alias.js' },
-    },
-  },
   rules: {
     'no-param-reassign': [
       'error',
@@ -84,6 +79,7 @@ module.exports = {
       },
     ],
     'unicorn/no-null': 'off',
+    'unicorn/prefer-export-from': 'off',
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
@@ -94,9 +90,11 @@ module.exports = {
         project: './tsconfig.json',
       },
       settings: {
-        typescript: {
-          alwaysTryTypes: true,
-          project: './tsconfig.json',
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: './tsconfig.json',
+          },
         },
       },
       extends: [
@@ -121,11 +119,15 @@ module.exports = {
             groups: [
               ['^react', '^prop-types', '^@?\\w'],
               [
-                '^(@src/(constants|containers|components|routes|pages|hooks|contexts|api|services|utils))(/.*|$)',
+                '^(@/(constants|containers|components|routes|pages|hooks|contexts|api|services|utils))(/.*|$)',
               ],
               ['^\\.', '^\\u0000'],
-              ['^(@src/styles)(/.*|$)', '^.+\\.module.s?css$', '^.+\\.s?css$'],
-              ['^(@site)(/.*|$)'],
+              [
+                '^(@/styles)(/.*|$)',
+                '^.+\\.module.s?css$',
+                '^.+\\.s?css$',
+                '^(@/assets)(/.*|$)',
+              ],
             ],
           },
         ],

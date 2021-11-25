@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Link from '@docusaurus/Link';
+import Link from 'next/link';
 
 import styles from './index.module.scss';
 
@@ -26,10 +26,10 @@ function Navbar(): JSX.Element {
       <div className={styles.left}>LOGO</div>
       <div className={styles.center}>
         {/* <div>
-          <Link to="/blog">概览</Link>
+          <Link href="/blog">概览</Link>
         </div> */}
         <div>
-          <Link to="/docs/intro">文档</Link>
+          <Link href="/docs/intro">文档</Link>
         </div>
         <div>GitHub</div>
       </div>
