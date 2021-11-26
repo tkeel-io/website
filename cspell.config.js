@@ -56,7 +56,6 @@ module.exports = {
     '**/package-lock.json',
     '**/Dockerfile',
     '**/.dockerignore',
-    './static/**',
-    './docs/**',
+    '**/*.svg',
   ],
 };
