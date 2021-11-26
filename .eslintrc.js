@@ -71,7 +71,6 @@ module.exports = {
     ],
     'react/jsx-key': 'error',
     'react/jsx-props-no-spreading': 'off',
-    'unicorn/consistent-destructuring': 'off',
     'unicorn/filename-case': [
       'error',
       {
@@ -81,9 +80,9 @@ module.exports = {
         },
       },
     ],
+    'unicorn/no-array-for-each': 'off',
     'unicorn/no-null': 'off',
     'unicorn/prefer-export-from': 'off',
-    'unicorn/prefer-query-selector': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
   overrides: [
@@ -96,7 +95,6 @@ module.exports = {
         'import/resolver': {
           typescript: {
             alwaysTryTypes: true,
-            project: './tsconfig.json',
           },
         },
       },
