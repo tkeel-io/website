@@ -11,6 +11,8 @@
     cursor: pointer;
 
     .logo {
+      height: 90px;
+      width: 90px;
       position: relative;
       top: 310px;
       z-index: 1;
@@ -21,6 +23,8 @@
     }
 
     .github-bg {
+      height: 520px;
+      width: 520px;
       display: block;
       margin: 0 auto;
       transform: scale(1);
