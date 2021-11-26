@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
 
 import styles from './index.module.scss';
 
@@ -29,7 +28,7 @@ function Navbar(): JSX.Element {
           <Link href="/blog">概览</Link>
         </div> */}
         <div>
-          <Link href="/docs/intro">文档</Link>
+          <a href="#">文档</a>
         </div>
         <div>GitHub</div>
       </div>
