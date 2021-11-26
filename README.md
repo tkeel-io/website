@@ -16,19 +16,8 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm run dev
 ```
-
-## Git Commit
-
-Follow [@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)
-
-## Notes
-
-Static resource of the markdown document please place in static
-`static/*/docs/` directory.
-
-For example, the image resource is placed in `static/images/docs/`
 
 ## License
 

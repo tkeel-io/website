@@ -1,5 +1,5 @@
 import React from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -15,27 +15,27 @@ function GithubLogo(): JSX.Element {
   return (
     <div className={styles['github-logo']}>
       <div className={styles['github-img']}>
-        <img
+        <Image
           className={styles.logo}
-          src={useBaseUrl('/images/github.png')}
+          src="/images/github.png"
           alt=""
+          layout="fill"
         />
-        <img
+        <Image
           className={styles['github-bg']}
-          src={useBaseUrl('/images/github-bg.png')}
+          src="/images/github-bg.png"
           alt=""
+          layout="fill"
         />
         <div className={styles.text}>GitHub</div>
       </div>
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/control-has-associated-label */}
       <div
         className={styles['move-top']}
         role="button"
         tabIndex={0}
         onClick={onButtonClick}
-      >
-        {/* <img src={useBaseUrl("/images/move-top.png") }  alt="" /> */}
-      </div>
+      />
     </div>
   );
 }

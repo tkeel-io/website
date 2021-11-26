@@ -1,5 +1,5 @@
 import React from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import Image from 'next/image';
 
 import styles from './index.module.scss';
 
@@ -32,7 +32,7 @@ function DynamicImage(): JSX.Element {
     return (
       <div className={styles.container} style={{ backgroundColor: bgColor }}>
         <div className={styles['min-width']}>
-          <img src={useBaseUrl(bg)} alt="" style={bgStyle} />
+          {/* <Image src={bg} alt="" style={bgStyle} layout="fill" /> */}
 
           <div className={styles.text} style={{ order }}>
             <div className={styles['text-inner']}>
