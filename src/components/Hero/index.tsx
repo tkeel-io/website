@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 import styles from './index.module.scss';
-import moveBottom from '@/assets/images/to-bottom.svg';
+
+import moveBottom from '@public/images/to-bottom.svg';
 
 type AppProps = {
   dom: {

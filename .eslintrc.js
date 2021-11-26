@@ -18,8 +18,10 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'next/core-web-vitals',
     'airbnb',
     'airbnb/hooks',
+    'plugin:eslint-comments/recommended',
     'plugin:promise/recommended',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
@@ -128,6 +130,7 @@ module.exports = {
                 '^.+\\.s?css$',
                 '^(@/assets)(/.*|$)',
               ],
+              ['^(@public)(/.*|$)'],
             ],
           },
         ],
