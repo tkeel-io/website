@@ -71,6 +71,7 @@ module.exports = {
     ],
     'react/jsx-key': 'error',
     'react/jsx-props-no-spreading': 'off',
+    'unicorn/consistent-destructuring': 'off',
     'unicorn/filename-case': [
       'error',
       {
