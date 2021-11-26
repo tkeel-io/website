@@ -15,7 +15,12 @@ function GithubLogo(): JSX.Element {
   return (
     <div className={styles['github-logo']}>
       <div className={styles['github-img']}>
-        <Image className={styles.logo} src="/images/github.png" alt="" />
+        <Image
+          className={styles.logo}
+          src="/images/github.png"
+          alt=""
+          layout="fill"
+        />
         <Image
           className={styles['github-bg']}
           src="/images/github-bg.png"
