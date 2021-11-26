@@ -24,7 +24,7 @@ function Card({ img = '', theme, desc }: CardProps) {
     >
       <div className={styles.card}>
         <div className={styles.img}>
-          <Image src={img} alt="" layout="fill" />
+          <Image src={img} alt="" width={40} height={40} />
         </div>
         <div className={styles.theme}>{theme}</div>
         <div className={styles.desc}>{desc}</div>

@@ -43,7 +43,7 @@ function Card({ img = '', text }: CardProps) {
     >
       <div className={styles.card}>
         <div>
-          <Image src={img} alt="" layout="fill" />
+          <Image src={img} alt="" width={64} height={65}  />
         </div>
         <div className={styles.text}>{text}</div>
       </div>
@@ -185,12 +185,14 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
   return (
     <div className={styles['lead-technology']} ref={leadTechnology}>
       <Particles params={params} className={styles.particles} />
-      <Image
-        src="/images/lead-technology-bg.png"
-        className={styles.bg}
-        alt=""
-        layout="fill"
+      <div  className={styles.bg}>
+        <Image
+          src="/images/lead-technology-bg.png"
+          width={526}
+          height={528}
+          alt=""
       />
+      </div>
       <div className={styles.title}>技术领先性</div>
       <div className={styles.container}>
         {Card({ img: '/images/cloud-native.png', text: '100% Cloud Native' })}

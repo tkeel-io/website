@@ -15,18 +15,23 @@ function GithubLogo(): JSX.Element {
   return (
     <div className={styles['github-logo']}>
       <div className={styles['github-img']}>
-        <Image
-          className={styles.logo}
-          src="/images/github.png"
-          alt=""
-          layout="fill"
-        />
-        <Image
-          className={styles['github-bg']}
-          src="/images/github-bg.png"
-          alt=""
-          layout="fill"
-        />
+        <div  className={styles.logo}>
+            <Image
+              src="/images/github.png"
+              alt=""
+              layout="fill"
+            />
+        </div>
+
+        <div  className={styles['github-bg']}>
+          <Image
+            src="/images/github-bg.png"
+            alt=""
+            layout="fill"
+          />
+        </div>
+
+
         <div className={styles.text}>GitHub</div>
       </div>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/control-has-associated-label */}

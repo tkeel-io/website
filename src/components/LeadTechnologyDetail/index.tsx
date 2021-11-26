@@ -99,7 +99,9 @@ function CloudNativeDetailCard({
         </div>
 
         <div className={styles.img}>
-          <Image src={img} alt="" layout="fill" />
+          <div style={{height:"622px"}}>
+           <Image src={img} alt="" layout="fill" />
+          </div>
           <div ref={numEl} className={styles.number}>
             0
           </div>
