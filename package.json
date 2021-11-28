@@ -16,7 +16,7 @@
     "start": "next start",
     "lint:format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
     "lint:script": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "lint:typescript": "tsc",
+    "lint:typescript": "tsc --noEmit",
     "lint:style": "stylelint --fix \"**/*.{css,scss}\"",
     "lint:spell": "cspell \"**\"",
     "pre-commit": "lint-staged",
