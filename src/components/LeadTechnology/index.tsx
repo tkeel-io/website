@@ -10,19 +10,19 @@ import Image from 'next/image';
 
 import styles from './index.module.scss';
 
-type AppProps = {
-  dom: {
-    current: {
-      offsetTop: number;
-      style: {
-        marginTop: string;
-        position: string;
-        top: string;
-        zIndex: string;
-      };
-    };
-  };
-};
+// type AppProps = {
+//   dom: {
+//     current: {
+//       offsetTop: number;
+//       style: {
+//         marginTop: string;
+//         position: string;
+//         top: string;
+//         zIndex: string;
+//       };
+//     };
+//   };
+// };
 
 type CardProps = {
   img: string;
@@ -43,7 +43,7 @@ function Card({ img = '', text }: CardProps) {
     >
       <div className={styles.card}>
         <div>
-          <Image src={img} alt="" width={64} height={65}  />
+          <Image src={img} alt="" width={64} height={65} />
         </div>
         <div className={styles.text}>{text}</div>
       </div>
@@ -51,7 +51,7 @@ function Card({ img = '', text }: CardProps) {
   );
 }
 
-function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
+function LeadTechnology({ dom }: any, ref: any): JSX.Element {
   const params = {
     particles: {
       line_linked: {
@@ -160,21 +160,24 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
   const leadTechnology = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => leadTechnology.current);
   useEffect(() => {
-    const { offsetTop } = leadTechnology.current;
+    // const { offsetTop } = leadTechnology.current;
+    const offsetTop = leadTechnology?.current?.offsetTop || 0;
+
     window.addEventListener(
       'scroll',
       () => {
+        const style: any = leadTechnology?.current?.style;
         const scrollTop =
           document.documentElement.scrollTop || document.body.scrollTop;
         if (scrollTop + 60 > offsetTop) {
-          leadTechnology.current.style.position = 'fixed';
-          leadTechnology.current.style.top = '60px';
-          leadTechnology.current.style.zIndex = '2';
+          style.position = 'fixed';
+          style.top = '60px';
+          style.zIndex = '2';
           dom.current.style.marginTop = '720px';
         } else {
-          leadTechnology.current.style.position = 'relative';
-          leadTechnology.current.style.top = '0';
-          leadTechnology.current.style.zIndex = '1';
+          style.position = 'relative';
+          style.top = '0';
+          style.zIndex = '1';
           dom.current.style.marginTop = '0';
         }
       },
@@ -184,14 +187,14 @@ function LeadTechnology({ dom }: AppProps, ref): JSX.Element {
 
   return (
     <div className={styles['lead-technology']} ref={leadTechnology}>
-      <Particles params={params} className={styles.particles} />
-      <div  className={styles.bg}>
+      <Particles params={params as object} className={styles.particles} />
+      <div className={styles.bg}>
         <Image
           src="/images/lead-technology-bg.png"
           width={526}
           height={528}
           alt=""
-      />
+        />
       </div>
       <div className={styles.title}>技术领先性</div>
       <div className={styles.container}>

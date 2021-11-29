@@ -5,15 +5,15 @@ import styles from './index.module.scss';
 
 import moveBottom from '@public/images/to-bottom.svg';
 
-type AppProps = {
-  dom: {
-    current: {
-      offsetTop: number;
-    };
-  };
-};
+// type AppProps = {
+//   dom: {
+//     current: {
+//       offsetTop: number;
+//     };
+//   };
+// };
 
-function Hero({ dom }: AppProps): JSX.Element {
+function Hero({ dom }: any): JSX.Element {
   const onButtonClick = () => {
     return window.scrollTo({
       top: dom.current.offsetTop - 60,
@@ -30,8 +30,9 @@ function Hero({ dom }: AppProps): JSX.Element {
       () => {
         const scrollTop =
           document.documentElement.scrollTop || document.body.scrollTop;
-        hero.current.style.opacity =
-          scrollTop > window.screen.height ? '0' : '1';
+        hero.current?.style.opacity &&
+          (hero.current.style.opacity =
+            scrollTop > window.screen.height ? '0' : '1');
       },
       false
     );

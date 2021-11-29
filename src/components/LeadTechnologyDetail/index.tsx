@@ -14,6 +14,10 @@ type CardProps = {
   arr: string[];
   bg: string;
   bgStyle: object;
+  video: {
+    width: string;
+    height: string;
+  };
 };
 type CloudNativeDetailCardProps = {
   title: string;
@@ -21,11 +25,13 @@ type CloudNativeDetailCardProps = {
   arr: string[];
 };
 
-function Card({ title, img = '', arr, bg = '', bgStyle }: CardProps) {
+function Card({ title, img = '', arr, bg = '', bgStyle, video }: CardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.minWidth}>
-        <Image src={bg} alt="" style={bgStyle} layout="fill" />
+        <div style={bgStyle}>
+          <Image src={bg} alt="" layout="fill" />
+        </div>
         <div className={styles.text}>
           <div className={styles.title}>{title} </div>
           <ul>
@@ -37,8 +43,8 @@ function Card({ title, img = '', arr, bg = '', bgStyle }: CardProps) {
         <div className={styles.img}>
           <video
             src={img}
-            width="1009"
-            height="606"
+            width={video.width}
+            height={video.height}
             autoPlay
             loop
             muted
@@ -59,7 +65,7 @@ function CloudNativeDetailCard({
   const cloudNativeDetailCard = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const checkInPage = (el) => {
+    const checkInPage = (el: any) => {
       const pageHeight: number = document.documentElement.clientHeight;
       const contentTop: number = el.getBoundingClientRect().top;
       const contentHeight: number = el.offsetHeight;
@@ -74,7 +80,10 @@ function CloudNativeDetailCard({
         let num = 0;
         const t = setInterval(function fn() {
           num += 1;
-          numEl.current.innerHTML = `${num}%`;
+          if (numEl?.current?.innerHTML) {
+            numEl.current.innerHTML = `${num}%`;
+          }
+
           if (num === 100) {
             clearInterval(t);
           }
@@ -99,8 +108,8 @@ function CloudNativeDetailCard({
         </div>
 
         <div className={styles.img}>
-          <div style={{height:"622px"}}>
-           <Image src={img} alt="" layout="fill" />
+          <div style={{ height: '622px' }}>
+            <Image src={img} alt="" layout="fill" />
           </div>
           <div ref={numEl} className={styles.number}>
             0
@@ -111,7 +120,7 @@ function CloudNativeDetailCard({
   );
 }
 
-function LeadTechnologyDetail({}, ref): JSX.Element {
+function LeadTechnologyDetail({}, ref: any): JSX.Element {
   const leadTechnologyDetail = useRef<HTMLDivElement>(null);
   useImperativeHandle(ref, () => leadTechnologyDetail.current);
   return (
@@ -135,7 +144,17 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
           'tKeel 利用 Dapr 实现语言无关性，可以在任何托管环境中运行，提供非厂商绑定且可扩展、可靠和高性能的伴随开发方法。',
         ],
         bg: '/images/any-language-detail-bg.png',
-        bgStyle: { position: 'absolute', left: '-180px', top: '-280px' },
+        bgStyle: {
+          position: 'absolute',
+          left: '-180px',
+          top: '-280px',
+          width: '805px',
+          height: '765px',
+        },
+        video: {
+          width: '906',
+          height: '600',
+        },
       })}
       {Card({
         title: 'Everything is plugin',
@@ -145,7 +164,17 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
           '使得应用轻松应对各种解决方案。',
         ],
         bg: '/images/everything-plugin-detail-bg.png',
-        bgStyle: { position: 'absolute', right: '-260px', top: '-220px' },
+        bgStyle: {
+          position: 'absolute',
+          right: '-260px',
+          top: '-220px',
+          height: '965px',
+          width: '975px',
+        },
+        video: {
+          width: '1008',
+          height: '606',
+        },
       })}
       {Card({
         title: 'Never so easy',
@@ -156,7 +185,17 @@ function LeadTechnologyDetail({}, ref): JSX.Element {
           '基于云原生方式使得部署方式上没有限制。',
         ],
         bg: '/images/so-easy-detail-bg.png',
-        bgStyle: { position: 'absolute', left: '-220px', top: '-220px' },
+        bgStyle: {
+          position: 'absolute',
+          left: '-220px',
+          top: '-220px',
+          width: '725px',
+          height: '695px',
+        },
+        video: {
+          width: '1200',
+          height: '700',
+        },
       })}
     </div>
   );
