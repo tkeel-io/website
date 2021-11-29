@@ -14,10 +14,10 @@ type ContainerProps = {
     text4: string;
     text5: string;
   };
-  video:{
-    width:string;
-    height:string
-  }
+  video: {
+    width: string;
+    height: string;
+  };
   bg?: string;
   bgStyle?: object;
   bgColor?: string;
@@ -32,15 +32,16 @@ function DynamicImage(): JSX.Element {
     bg = '',
     bgStyle = {},
     bgColor = '',
-    video
+    video,
   }: ContainerProps) {
     return (
       <div className={styles.container} style={{ backgroundColor: bgColor }}>
         <div className={styles['min-width']}>
-          {bg&&( <div style={bgStyle}> 
-            <Image src={bg} alt=""  layout="fill" />
-          </div>) }
-         
+          {bg && (
+            <div style={bgStyle}>
+              <Image src={bg} alt="" layout="fill" />
+            </div>
+          )}
 
           <div className={styles.text} style={{ order }}>
             <div className={styles['text-inner']}>
@@ -94,10 +95,10 @@ function DynamicImage(): JSX.Element {
         bg: '/images/digital-object-bg.png',
         bgStyle: { position: 'absolute', left: '-220px', top: '-200px' },
         bgColor: '#09121A',
-        video:{
-          width:"500",
-          height:"500"
-        }
+        video: {
+          width: '500',
+          height: '500',
+        },
       })}
 
       {Container({
@@ -114,10 +115,10 @@ function DynamicImage(): JSX.Element {
         bg: '/images/rich-data-bg.png',
         bgStyle: { position: 'absolute', left: '-120px', top: '-10px' },
         bgColor: '#09121A',
-        video:{
-          width:"600",
-          height:"500"
-        }
+        video: {
+          width: '600',
+          height: '500',
+        },
       })}
 
       {Container({
@@ -134,10 +135,10 @@ function DynamicImage(): JSX.Element {
         bg: '/images/digital-interaction-bg.png',
         bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
         bgColor: '#09121A',
-        video:{
-          width:"400",
-          height:"400"
-        }
+        video: {
+          width: '400',
+          height: '400',
+        },
       })}
       {Container({
         order: 1,
@@ -151,10 +152,10 @@ function DynamicImage(): JSX.Element {
           text5: '周期抽样来在数字平行世界记录每个物的历史状态',
         },
         bgColor: '#09121A',
-        video:{
-          width:"520",
-          height:"460"
-        }
+        video: {
+          width: '520',
+          height: '460',
+        },
       })}
     </div>
   );

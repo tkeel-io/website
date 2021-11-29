@@ -6,16 +6,13 @@ function Navbar(): JSX.Element {
   const navbarEl = useRef<HTMLDivElement>(null);
   useEffect(() => {
     window.addEventListener('scroll', () => {
+      const style: any = navbarEl?.current?.style;
       if (document.documentElement.scrollTop > 100) {
-        navbarEl.current.style.backgroundColor = 'rgba(50, 69, 88, 0.3)';
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        navbarEl.current.style.backdropFilter = 'blur(24px)';
+        style.backgroundColor = 'rgba(50, 69, 88, 0.3)';
+        style.backdropFilter = 'blur(24px)';
       } else {
-        navbarEl.current.style.backgroundColor = 'transparent';
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        navbarEl.current.style.backdropFilter = 'blur(0)';
+        style.backgroundColor = 'transparent';
+        style.backdropFilter = 'blur(0)';
       }
     });
   });
@@ -25,7 +22,7 @@ function Navbar(): JSX.Element {
       <div className={styles.left}>LOGO</div>
       <div className={styles.center}>
         <div>
-        概览
+          概览
           {/* <a href="#" style={{color:"black"}}></a> */}
         </div>
         <div>
