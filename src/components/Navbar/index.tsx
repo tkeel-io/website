@@ -24,11 +24,13 @@ function Navbar(): JSX.Element {
     <div className={styles.navbar} ref={navbarEl}>
       <div className={styles.left}>LOGO</div>
       <div className={styles.center}>
-        {/* <div>
-          <Link href="/blog">概览</Link>
-        </div> */}
         <div>
-          <a href="#">文档</a>
+        概览
+          {/* <a href="#" style={{color:"black"}}></a> */}
+        </div>
+        <div>
+          {/* <a href="#">文档</a> */}
+          文档
         </div>
         <div>GitHub</div>
       </div>

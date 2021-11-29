@@ -14,6 +14,10 @@ type ContainerProps = {
     text4: string;
     text5: string;
   };
+  video:{
+    width:string;
+    height:string
+  }
   bg?: string;
   bgStyle?: object;
   bgColor?: string;
@@ -28,6 +32,7 @@ function DynamicImage(): JSX.Element {
     bg = '',
     bgStyle = {},
     bgColor = '',
+    video
   }: ContainerProps) {
     return (
       <div className={styles.container} style={{ backgroundColor: bgColor }}>
@@ -61,8 +66,8 @@ function DynamicImage(): JSX.Element {
           </div>
           <video
             src={img}
-            width="520"
-            height="460"
+            width={video.width}
+            height={video.height}
             autoPlay
             loop
             muted
@@ -87,8 +92,12 @@ function DynamicImage(): JSX.Element {
           text5: '间以及逻辑上的对象都应该可以找到对应的表现形式',
         },
         bg: '/images/digital-object-bg.png',
-        bgStyle: { position: 'absolute', left: '-220px', top: '-200px',width:"865px",height:"769px" },
+        bgStyle: { position: 'absolute', left: '-220px', top: '-200px' },
         bgColor: '#09121A',
+        video:{
+          width:"500",
+          height:"500"
+        }
       })}
 
       {Container({
@@ -103,8 +112,12 @@ function DynamicImage(): JSX.Element {
           text5: '息中的局部状态来构建物的数字平行世界',
         },
         bg: '/images/rich-data-bg.png',
-        bgStyle: { position: 'absolute', left: '-120px', top: '-10px',width:"560px",height:"457px" },
+        bgStyle: { position: 'absolute', left: '-120px', top: '-10px' },
         bgColor: '#09121A',
+        video:{
+          width:"600",
+          height:"500"
+        }
       })}
 
       {Container({
@@ -119,10 +132,13 @@ function DynamicImage(): JSX.Element {
           text5: '据如何更好的被利用',
         },
         bg: '/images/digital-interaction-bg.png',
-        bgStyle: { position: 'absolute', right: '-160px', top: '-300px',width:"970px",height:"935px" },
+        bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
         bgColor: '#09121A',
+        video:{
+          width:"400",
+          height:"400"
+        }
       })}
-
       {Container({
         order: 1,
         img: '/videos/digital-twin.mp4',
@@ -135,6 +151,10 @@ function DynamicImage(): JSX.Element {
           text5: '周期抽样来在数字平行世界记录每个物的历史状态',
         },
         bgColor: '#09121A',
+        video:{
+          width:"520",
+          height:"460"
+        }
       })}
     </div>
   );
