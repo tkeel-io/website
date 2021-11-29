@@ -20,7 +20,12 @@ function Footer(): JSX.Element {
         </div>
         <div className={styles.right}>
           <div className={styles.img}>
-            <Image src="/images/wechat.png" alt="wechat" width={128} height={128} />
+            <Image
+              src="/images/wechat.png"
+              alt="wechat"
+              width={128}
+              height={128}
+            />
           </div>
           <div>关注tKeel企业微信</div>
           <div>随时了解最新活动与资讯</div>
