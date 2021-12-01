@@ -48,7 +48,7 @@ function Hero({ dom }: any): JSX.Element {
           新一代核心架构
         </div>
         <div className={styles.row}>
-          帮助物联网服务商关注于数据层，在可插拔架构基础上
+          帮助物联网服务商专注于数据层，在可插拔架构基础上
           <br />
           实现任何语言、任何架构的应用开发，100%云原生。
         </div>
