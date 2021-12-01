@@ -57,5 +57,6 @@ module.exports = {
     '**/Dockerfile',
     '**/.dockerignore',
     '**/*.svg',
+    '**/*.mp4',
   ],
 };
