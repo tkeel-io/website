@@ -36,12 +36,13 @@ function Card({ img = '', theme, desc }: CardProps) {
 function Select(): JSX.Element {
   return (
     <div className={styles.select}>
-      <Image
-        src="/images/select-bg.png"
-        alt=""
-        className={styles['select-bg']}
-        layout="fill"
-      />
+    <div className={styles["select-bg"]}>
+        <Image
+          src="/images/select-bg.png"
+          alt=""
+          layout="fill"
+        />
+      </div>
       <div className={styles.title}>为什么要选择tKeel？</div>
       <div className={styles.subtitle}>功能特性</div>
 
