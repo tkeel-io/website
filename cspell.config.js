@@ -41,6 +41,7 @@ module.exports = {
     'onhover',
     'Dapr',
     'dockerhub',
+    'svgr',
   ],
   ignorePaths: [
     '**/.idea/**',
