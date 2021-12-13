@@ -18,67 +18,67 @@ type ContainerProps = {
     width: string;
     height: string;
   };
-  bg?: string;
-  bgStyle?: object;
-  bgColor?: string;
+  bg: string;
+  bgStyle: object;
+  bgColor: string;
 };
 
-function DynamicImage(): JSX.Element {
-  function Container({
-    order,
-    img,
-    gradient,
-    text,
-    bg = '',
-    bgStyle = {},
-    bgColor = '',
-    video,
-  }: ContainerProps) {
-    return (
-      <div className={styles.container} style={{ backgroundColor: bgColor }}>
-        <div className={styles['min-width']}>
-          {bg && (
-            <div style={bgStyle}>
-              <Image src={bg} alt="" layout="fill" />
-            </div>
-          )}
+function Container({
+  order,
+  img,
+  gradient,
+  text,
+  bg = '',
+  bgStyle = {},
+  bgColor = '',
+  video,
+}: ContainerProps) {
+  return (
+    <div className={styles.container} style={{ backgroundColor: bgColor }}>
+      <div className={styles['min-width']}>
+        {bg && (
+          <div style={bgStyle}>
+            <Image src={bg} alt="" layout="fill" />
+          </div>
+        )}
 
-          <div className={styles.text} style={{ order }}>
-            <div className={styles['text-inner']}>
-              {text?.text1}
-              <br />
-              {text?.text2}
-              <span
-                style={{
-                  background: gradient,
-                  WebkitBackgroundClip: 'text',
-                  color: 'transparent',
-                }}
-              >
-                {' '}
-                {text?.text3}{' '}
-              </span>
-              <br />
-              <div className={styles.describe}>
-                <div>{text?.text4}</div>
-                <div>{text?.text5}</div>
-              </div>
+        <div className={styles.text} style={{ order }}>
+          <div className={styles['text-inner']}>
+            {text?.text1}
+            <br />
+            {text?.text2}
+            <span
+              style={{
+                background: gradient,
+                WebkitBackgroundClip: 'text',
+                color: 'transparent',
+              }}
+            >
+              {' '}
+              {text?.text3}{' '}
+            </span>
+            <br />
+            <div className={styles.describe}>
+              <div>{text?.text4}</div>
+              <div>{text?.text5}</div>
             </div>
           </div>
-          <video
-            src={img}
-            width={video.width}
-            height={video.height}
-            autoPlay
-            loop
-            muted
-            className={styles.video}
-          />
         </div>
+        <video
+          src={img}
+          width={video.width}
+          height={video.height}
+          autoPlay
+          loop
+          muted
+          className={styles.video}
+        />
       </div>
-    );
-  }
+    </div>
+  );
+}
 
+function DynamicImage(): JSX.Element {
   return (
     <div className={styles['dynamic-image']}>
       {Container({
@@ -94,7 +94,7 @@ function DynamicImage(): JSX.Element {
         },
         bg: '/images/digital-object-bg.png',
         bgStyle: { position: 'absolute', left: '-220px', top: '-200px' },
-        bgColor: '#09121A',
+        bgColor: '#08131c',
         video: {
           width: '500',
           height: '500',
@@ -114,7 +114,7 @@ function DynamicImage(): JSX.Element {
         },
         bg: '/images/rich-data-bg.png',
         bgStyle: { position: 'absolute', left: '-120px', top: '-10px' },
-        bgColor: '#09121A',
+        bgColor: '#08131c',
         video: {
           width: '600',
           height: '500',
@@ -134,7 +134,7 @@ function DynamicImage(): JSX.Element {
         },
         bg: '/images/digital-interaction-bg.png',
         bgStyle: { position: 'absolute', right: '-160px', top: '-300px' },
-        bgColor: '#09121A',
+        bgColor: '#08131c',
         video: {
           width: '400',
           height: '400',
@@ -151,7 +151,9 @@ function DynamicImage(): JSX.Element {
           text4: '时序可以储存物的状态，它可以看做是基于时间的连续函数，通过',
           text5: '周期抽样来在数字平行世界记录每个物的历史状态',
         },
-        bgColor: '#09121A',
+        bg: '',
+        bgStyle: {},
+        bgColor: '#08131c',
         video: {
           width: '520',
           height: '460',
